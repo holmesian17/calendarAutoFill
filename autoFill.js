@@ -4,14 +4,17 @@
 // @grant    none
 // ==/UserScript==
 
-var txt = prompt("Paste your JSON data here")
-var obj = JSON.parse(txt)
+window.setTimeout(5000); // so it loads the whole page before doing anything
+var txt = prompt("Paste your JSON data here"); // enter the JSON data
+var obj = JSON.parse(txt); // turns the JSON data into a javascript object
 
-console.log(obj.title) // now we have access to the JSON data in the DOM as a javascript object
+console.log(obj.title); // now we have access to the JSON data in the DOM as a javascript object
 
-var currenturl = window.location.href
+var currentUrl = window.location.href; // gets the url of the current page
+console.log(currentUrl); // logs the current URL for testing so that I know it's working
 
-if (currenturl = "https://www.framinghamma.gov/calendar.aspx?CID=14"){
+/*
+if (!currentUrl = "https://www.framinghamma.gov/calendar.aspx?CID=14"){
   	var btn = document.createElement("BUTTON");
     var t = document.createTextNode("CLICK ME");
     btn.appendChild(t);
